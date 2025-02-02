@@ -5,9 +5,9 @@ Ce petit tuto airflow m'a permis de découvrir et de comprendre comment fonction
 
 ## Composants du pipeline
 
-Data Source: La plate forme [PRIM](https://prim.iledefrance-mobilites.fr/)..
-Apache Airflow : Orchestre pipeline et programme l'ingestion des données..
-DuckDB: Stocke toutes les données ingérées par le pipeline..
+Data Source: La plate forme [PRIM](https://prim.iledefrance-mobilites.fr/)  
+Apache Airflow : Orchestre pipeline et programme l'ingestion des données  
+DuckDB: Stocke toutes les données ingérées par le pipeline  
 
 Scripts :
 
