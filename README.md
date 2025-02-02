@@ -18,12 +18,46 @@ Scripts :
 
 ### 1- Télécharger et installer :  
 
-Docker destop ( plus pratique pour mieux gérer les conteneurs en développement local)  
-Dbeaver pour notre base de données DuckDB  
+###### A - Docker destop ( plus pratique pour mieux gérer les conteneurs en développement local)  
 
-### 2- Télécharger et installer un IDE de votre choix (VS Code, Intellij)
+###### B - Dbeaver pour notre base de données DuckDB  
 
-### 3- Faire un clone du repertoire projet sur votre environnement locale 
+###### C - Un IDE de votre choix (VS Code, Intellij)
+
+### 2- Configuration pour la base de données DuckDB avec DBeaver  
+
+###### A - Aller sur DBeaver et créer une nouvelle connexion DuckDB  
+
+![BDD_1](images/creation_bdd_1.png)
+
+###### B - Selectionner le bouton creer  
+
+![BDD_2](images/creation_bdd_2.png)  
+
+
+###### C - Choisir le fichier *my_bdd_airflow.duckdb*  pour créer une nouvelle connexion  
+
+![BDD_3](images/creation_bdd_3.png) 
+
+
+*Scrit SQL de création de la table* :  
+
+``
+CREATE TABLE data_from_prim(  
+station_id BIGINT,  
+stationCode VARCHAR,  
+name VARCHAR,  
+lat DOUBLE,  
+lon DOUBLE,  
+capacity INTEGER,  
+rental_methods VARCHAR[]  
+);  
+``
+
+
+
+
+### 3- Faire ensuite un clone du repertoire projet sur notre environnement locale 
 
 `git clone https://github.com/tchanatf/apprendre_airflow.git`  
 
@@ -38,23 +72,33 @@ Dbeaver pour notre base de données DuckDB
 ### 6- Ensuite démarrer les services à l'aide du fichier *docker-compose.yml*  
 
 `docker compose up -d`  
-[SERVICE DOCKER](images/launch_image_docker.png)  
+
+![SERVICE DOCKER](images/launch_image_docker.png)  
 
 ### 7- Verifier la liste des conteneurs lancés:
 
-Par terminal : [LISTE CONTENEUR](images/image_list_docker_process.png)  
+Par terminal :  
 
-Sur Docker Destop : [LISTE CONTENEUR](images/containers_dockers.png)
+![LISTE CONTENEUR](images/image_list_docker_process.png)  
 
-### 8- Acceder à l'interface utilisateur de Airflow avec l'adresse localhost:8080 avec les identifiant suivant :
+Sur Docker Destop :  
+
+![LISTE CONTENEUR](images/containers_dockers.png)
+
+### 8- Acceder à l'interface utilisateur de Airflow avec l'adresse `localhost:8080` avec les identifiant suivant :
+
 __user__: *admin* 
 __mot de passe__ : *admin*  
 
 En cliquant sur le bouton *executer* on peut voir que les différentes tâches du pipeline s'execute avec succès, et on peut notamment visualiser le graphe:  
 
-[INTERFACE AIRFLOW](images/image_dag_airflow.png)  
+![INTERFACE AIRFLOW](images/image_dag_airflow.png)  
 
-### 9 
+### 9 Se rendre ensuite sur DBeaver et visualiser les données chargées dans la base de données DuckDB provenant de notre pipeline
+
+![DONNEES](images/image_donnees_bdd.png)
+
+Fin pour ce projet de pipeline d'ingestion de données, Merci pour la lecture. 
 
 
 
