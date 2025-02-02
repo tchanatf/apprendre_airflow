@@ -11,7 +11,7 @@ __DuckDB__: Stocke toutes les données ingérées par le pipeline
 
 Scripts :
 
-**dag.py** -> Contient le DAG Airflow qui requête l'API, [PRIM](https://prim.iledefrance-mobilites.fr/)
+**dag.py** -> Contient le DAG Airflow qui requête l'API, [PRIM](https://prim.iledefrance-mobilites.fr/), ensuite reçoit une réponse en JSON, puis filtre les colonnes souhaitées et enfin les normalise sous forme tabulaire pour être insérées dans __DuckDB__
 
 ## Départ
 ### 1- Cloner le repertoire projet
