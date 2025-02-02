@@ -7,7 +7,7 @@ Ce petit tuto airflow m'a permis de découvrir et de comprendre comment fonction
 
 Data Source: La plate forme [PRIM](https://prim.iledefrance-mobilites.fr/)
 Apache Airflow : Orchestre pipeline et programme l'ingestion des données
-DuckDB: Stocke les données ingérées par le pipeline
+DuckDB: Stocke toutes les données ingérées par le pipeline
 
 Scripts :
 
