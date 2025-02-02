@@ -13,7 +13,8 @@ Scripts :
 
 **dag.py** -> Contient le DAG Airflow qui requête l'API, [PRIM](https://prim.iledefrance-mobilites.fr/)
 
-## Depart
+## Départ
+### 1- Cloner le repertoire projet
 
 
 
