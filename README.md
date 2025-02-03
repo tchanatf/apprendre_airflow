@@ -108,7 +108,8 @@ En cliquant sur le bouton *executer* on peut voir que les différentes tâches d
 
 ![DONNEES](images/image_donnees_bdd.png)
 
-Fin pour ce projet de pipeline d'ingestion de données, Merci pour la lecture. 
+Fin pour ce projet de pipeline d'ingestion de données, Merci pour la lecture.
+Compte Github : [LIEN](https://github.com/tchanatf/)
 
 
 
