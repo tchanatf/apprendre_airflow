@@ -6,9 +6,10 @@ Ce petit Projet m'a permis de découvrir et de comprendre comment fonctionne air
 ## Composants du pipeline
 
 __Data Source__: La plate forme [PRIM](https://prim.iledefrance-mobilites.fr/)  
-__Apache Airflow__ : Orchestre pipeline et programme l'ingestion des données  
+__Apache Airflow__ : Orchestre le pipeline et programme l'ingestion des données  
 __DuckDB__: Stocke toutes les données ingérées et les colonnes filtrées du pipeline  
 __Docker__:  Encapsule et isole Airflow et DuckDB dans des conteneurs, garantissant un environnement reproductible, cohérent et facilement déployable pour l’exécution du pipeline de récupération et de stockage des données.
+__API sur PRIM__ : Contient des API dans lequel on va requêter à l'aide d'un script python et récuperer les données au format JSON
 
 Scripts :
 
@@ -108,7 +109,8 @@ En cliquant sur le bouton *executer* on peut voir que les différentes tâches d
 
 ![DONNEES](images/image_donnees_bdd.png)
 
-Fin pour ce projet de pipeline d'ingestion de données, Merci pour la lecture.
+Fin pour ce projet de pipeline d'ingestion de données, Merci pour la lecture.  
+
 Compte Github : [LIEN](https://github.com/tchanatf/)
 
 
