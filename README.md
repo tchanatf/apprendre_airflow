@@ -42,7 +42,7 @@ Scripts :
 
 *Scrit SQL de création de la table* :  
 
-``
+```bash
 CREATE TABLE data_from_prim(  
 station_id BIGINT,  
 stationCode VARCHAR,  
@@ -52,26 +52,34 @@ lon DOUBLE,
 capacity INTEGER,  
 rental_methods VARCHAR[]  
 );  
-``
+```
 
 
 
 
 ### 3- Faire ensuite un clone du repertoire projet sur notre environnement locale 
 
-`git clone https://github.com/tchanatf/apprendre_airflow.git`  
+```bash
+git clone https://github.com/tchanatf/apprendre_airflow.git
+```
 
 ### 4- Ouvrir le projet a partir de votre IDE et ensuite dans le terminal de votre IDE, naviguer jusqu'au répertoire principale nommé *apprendre_airflow*  
 
-`cd apprendre_airflow`  
+```bash
+cd apprendre_airflow
+```  
 
 ### 5- Installer les packages nécessaires dans le fichier *require.txt*  
 
-`pip install -r .\require.txt`
+```bash 
+pip install -r .\require.txt
+```
 
 ### 6- Ensuite démarrer les services à l'aide du fichier *docker-compose.yml*  
 
-`docker compose up -d`  
+```bash
+docker compose up -d
+```  
 
 ![SERVICE DOCKER](images/launch_image_docker.png)  
 
@@ -87,14 +95,16 @@ Sur Docker Destop :
 
 ### 8- Acceder à l'interface utilisateur de Airflow avec l'adresse `localhost:8080` avec les identifiant suivant :
 
-__user__: *admin* 
+__user__: *admin*  
+
 __mot de passe__ : *admin*  
+
 
 En cliquant sur le bouton *executer* on peut voir que les différentes tâches du pipeline s'execute avec succès, et on peut notamment visualiser le graphe:  
 
 ![INTERFACE AIRFLOW](images/image_dag_airflow.png)  
 
-### 9 Se rendre ensuite sur DBeaver et visualiser les données chargées dans la base de données DuckDB provenant de notre pipeline
+### 9- Se rendre ensuite sur DBeaver et visualiser les données chargées dans la base de données DuckDB provenant de notre pipeline
 
 ![DONNEES](images/image_donnees_bdd.png)
 
